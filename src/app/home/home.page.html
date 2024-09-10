@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;"> Inicio ventas: eventosApp. </ion-title>
+  </ion-toolbar>
+  Usuario Ingresado: {{ username }}
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="Evento bailables" src="https://media.licdn.com/dms/image/C5612AQGbvv_Zj5JQ1w/article-cover_image-shrink_720_1280/0/1551108267663?e=2147483647&v=beta&t=0Q8tP_opTQTHswRBcgHlCOzSIc67crsHE61AGWLOS44" />
+    <ion-card-header>
+      <ion-card-title>Evento de fiesta y bailables</ion-card-title>
+      <ion-card-subtitle>Este evento consiste en celebrar a lo grande con familiares y amogos.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button id="present-alert">Comprar</ion-button>
+    <ion-alert
+      trigger="present-alert"
+      header="Please enter your info"
+      [buttons]="alertButtons"
+      [inputs]="alertInputs"
+    ></ion-alert>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Salon de casamiento" src="https://img.freepik.com/foto-gratis/salon-banquetes-decorado-flores_8353-10058.jpg" />
+    <ion-card-header>
+      <ion-card-title>El salon de casamiento o Reununion</ion-card-title>
+      <ion-card-subtitle>Un lugar para pasarla bien en familia, amogos o una ocasion especial con este evento tan elegegante</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button id="present-alert">Comprar</ion-button>
+    <ion-alert
+      trigger="present-alert"
+      header="Please enter your info"
+      [buttons]="alertButtons"
+      [inputs]="alertInputs"
+    ></ion-alert>
+  </ion-card>
+
+  <ion-card>
+    <img alt="sky fly events" src="https://www.skycostanera.cl/sites/sky/files/styles/convert_webp/public/2022-12/Amplios_espacios_para_tu_evento.png.webp?itok=TLZ3aJAh" />
+    <ion-card-header>
+      <ion-card-title>EL salon de los cielos</ion-card-title>
+      <ion-card-subtitle>Este salon es muy especial que te leva a las nuves con su vistas y un lugar especial</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button id="present-alert">Comprar</ion-button>
+    <ion-alert
+      trigger="present-alert"
+      header="Please enter your info"
+      [buttons]="alertButtons"
+      [inputs]="alertInputs"
+    ></ion-alert>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Sala de cine" src="https://i0.wp.com/imaginasantiago.com/wp-content/uploads/2013/11/cines-premium.jpg?resize=573%2C382&ssl=1" />
+    <ion-card-header>
+      <ion-card-title>La sala de cine Premiun</ion-card-title>
+      <ion-card-subtitle>Este espacio esta dedicado un evento especial </ion-card-subtitle>
+    </ion-card-header>
+    <ion-button id="present-alert">Comprar</ion-button>
+    <ion-alert
+      trigger="present-alert"
+      header="Please enter your info"
+      [buttons]="alertButtons"
+      [inputs]="alertInputs"
+    ></ion-alert>
+  </ion-card>
+
+</ion-content>
