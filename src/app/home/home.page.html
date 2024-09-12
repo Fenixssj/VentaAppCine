@@ -1,70 +1,112 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title style="text-align: center;"> Inicio ventas: eventosApp. </ion-title>
+    <ion-title style="text-align: center;">Home Evento CineApp</ion-title>
+    <ion-item lines="none" slot="end">
+      <ion-label>Usuario: {{ username }}</ion-label>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+    </ion-item>
   </ion-toolbar>
-  Usuario Ingresado: {{ username }}
 </ion-header>
 
-
 <ion-content [fullscreen]="true">
+  <h1> Navegacion de busqueda en Peliculas </h1>
+  <ion-searchbar color="medium" placeholder="Buscar peliculas(Esta de adorno jajaja)"></ion-searchbar>
+  <br>
   <ion-card>
-    <img alt="Evento bailables" src="https://media.licdn.com/dms/image/C5612AQGbvv_Zj5JQ1w/article-cover_image-shrink_720_1280/0/1551108267663?e=2147483647&v=beta&t=0Q8tP_opTQTHswRBcgHlCOzSIc67crsHE61AGWLOS44" />
     <ion-card-header>
-      <ion-card-title>Evento de fiesta y bailables</ion-card-title>
-      <ion-card-subtitle>Este evento consiste en celebrar a lo grande con familiares y amogos.</ion-card-subtitle>
+      <ion-card-title>Peliculas Recomendadas</ion-card-title>
+      <ion-card-subtitle>Catalogo de preferencias</ion-card-subtitle>
     </ion-card-header>
-    <ion-button id="present-alert">Comprar</ion-button>
-    <ion-alert
-      trigger="present-alert"
-      header="Please enter your info"
-      [buttons]="alertButtons"
-      [inputs]="alertInputs"
-    ></ion-alert>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Deadpool & Wolverine" src="https://cartelera.montevideo.com.uy/imagenes_espectaculos/moviedetail13/36997.jpg" />
+          </ion-thumbnail>
+          <ion-label>Deadpool & Wolverine</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Mi villano favorito 4" src="https://cines.com.py/images/dinamico/peliculas/2148/afiche/mvf4_latino.jpeg" />
+          </ion-thumbnail>
+          <ion-label>Mi villano favorito 4</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Bad boys" src="https://decine21.com/img/upload/obras/bad-boys-for-life-40822/bad-boys-for-life-40822-c.jpg" />
+          </ion-thumbnail>
+          <ion-label>Bad boys</ion-label>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Inside out 2" src="https://i.pinimg.com/736x/7d/9d/d5/7d9dd59eb9abb04c8e43494f150af4b7.jpg" />
+          </ion-thumbnail>
+          <ion-label>Inside out 2</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
   </ion-card>
 
-  <ion-card>
-    <img alt="Salon de casamiento" src="https://img.freepik.com/foto-gratis/salon-banquetes-decorado-flores_8353-10058.jpg" />
-    <ion-card-header>
-      <ion-card-title>El salon de casamiento o Reununion</ion-card-title>
-      <ion-card-subtitle>Un lugar para pasarla bien en familia, amogos o una ocasion especial con este evento tan elegegante</ion-card-subtitle>
-    </ion-card-header>
-    <ion-button id="present-alert">Comprar</ion-button>
-    <ion-alert
-      trigger="present-alert"
-      header="Please enter your info"
-      [buttons]="alertButtons"
-      [inputs]="alertInputs"
-    ></ion-alert>
-  </ion-card>
+  <br>
 
+  <h1>PELICULAS CINE_APP:</h1>
+  <br>
   <ion-card>
-    <img alt="sky fly events" src="https://www.skycostanera.cl/sites/sky/files/styles/convert_webp/public/2022-12/Amplios_espacios_para_tu_evento.png.webp?itok=TLZ3aJAh" />
+    <img alt="Deadpool & Wolverine" src="https://www.lahiguera.net/cinemania/pelicula/11086/deadpool_y_lobezno-cartel-11613.jpg" />
     <ion-card-header>
-      <ion-card-title>EL salon de los cielos</ion-card-title>
-      <ion-card-subtitle>Este salon es muy especial que te leva a las nuves con su vistas y un lugar especial</ion-card-subtitle>
+      <ion-card-title>Deadpool & Wolverine</ion-card-title>
     </ion-card-header>
-    <ion-button id="present-alert">Comprar</ion-button>
-    <ion-alert
-      trigger="present-alert"
-      header="Please enter your info"
-      [buttons]="alertButtons"
-      [inputs]="alertInputs"
-    ></ion-alert>
+    <ion-card-content>
+      Marvel Studios presenta su mayor equivocación hasta la fecha: DEADPOOL & WOLVERINE. Un apático Wade Wilson se esfuerza por adaptarse a la vida civil. Sus días como el mercenario moralmente flexible, Deadpool, han quedado atrás. Cuando su mundo se enfrenta a una amenaza existencial, reaciamente Wade debe ponerse el traje de nuevo, junto con un aún más reacio… ¿muy reacio? ¿reacísimo?... Tiene que convencer a un súper-reacio Wolverine a... Mierda. Las sinopsis son tan increíblemente estúpidas.
+    </ion-card-content>
+    <ion-button expand="block" color="primary" (click)="goToEventList('Deadpool')">Comprar</ion-button>
   </ion-card>
-
+  <br>
   <ion-card>
-    <img alt="Sala de cine" src="https://i0.wp.com/imaginasantiago.com/wp-content/uploads/2013/11/cines-premium.jpg?resize=573%2C382&ssl=1" />
+    <img alt="Bad Boys" src="https://m.media-amazon.com/images/I/71li3+y57wL.jpg" />
     <ion-card-header>
-      <ion-card-title>La sala de cine Premiun</ion-card-title>
-      <ion-card-subtitle>Este espacio esta dedicado un evento especial </ion-card-subtitle>
+      <ion-card-title>BAD BOYS: hasta la muerte</ion-card-title>
     </ion-card-header>
-    <ion-button id="present-alert">Comprar</ion-button>
-    <ion-alert
-      trigger="present-alert"
-      header="Please enter your info"
-      [buttons]="alertButtons"
-      [inputs]="alertInputs"
-    ></ion-alert>
+    <ion-card-content>
+      Este verano, los chicos malos favoritos del mundo están de regreso con su icónica mezcla de vertiginosa acción y escandalosa comedia, pero esta vez con un giro: los detectives favoritos de Miami son fugitivos.
+    </ion-card-content>
+    <ion-button expand="block" color="primary">Comprar</ion-button>
   </ion-card>
-
+  <br>
+  <ion-card>
+    <img alt="Mi villano favorito 4 " src="https://cines.com.py/images/dinamico/peliculas/2148/afiche/mvf4_latino.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Mi villano favorito 4</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      En la primera película de Mi villano favorito en siete años, Gru, el supervillano favorito del mundo que ahora es agente de la Liga Anti-Villanos, regresa para una nueva y emocionante era de caos de los Minions en Mi villano favorito 4 de Illumination.
+      Gru se enfrenta a nuevos némesis, Maxime Le Mal (Will Ferrell, ganador del Emmy) y su novia Valentina (Sofía Vergara, nominada al Emmy), por lo cual la familia se ve obligada a huir.
+    </ion-card-content>
+    <ion-button expand="block" color="primary">Comprar</ion-button>
+  </ion-card>
+  <br>
+  <ion-card>
+    <img alt="IntensaMente 2" src="https://cl2.buscafs.com/www.tomatazos.com/public/uploads/images/444555/444555_600x811.jpg" />
+    <ion-card-header>
+      <ion-card-title>IntensaMente 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      La película de Disney y Pixar INTENSA-MENTE 2 regresa a la mente de la recién adolescente Riley justo cuando el cuartel general está sufriendo una repentina demolición para hacer sitio a algo totalmente inesperado: ¡nuevas emociones! Alegría, Tristeza, Furia, Temor y Desagrado, que llevan mucho tiempo llevando a cabo una operación exitosa, no están seguros de cómo sentirse cuando aparece Ansiedad. Y parece que no está sola. Maya Hawke da su voz en inglés a Ansiedad, junto a Amy Poehler como Alegría, Phyllis Smith como Tristeza, Lewis Black como Furia, Tony Hale como Temor y Liza Lapira como Desagrado. Dirigida por Kelsey Mann y producida por Mark Nielsen, INTENSA-MENTE 2 estrena en cines en 2024.
+    </ion-card-content>
+    <ion-button expand="block" color="primary">Comprar</ion-button>
+  </ion-card>
+  <br>
+  <ion-card>
+    <img alt="KUNG FU PANDA 4" src="https://www.universalpictures.es/tl_files/content/movies/kung_fu_panda_4/posters/02.jpg" />
+    <ion-card-header>
+      <ion-card-title>KUNG FU PANDA 4</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Después de tres aventuras desafiando a la muerte y derrotando a villanos de clase mundial con su incomparable coraje y sus alocadas habilidades en las artes marciales, Po, el Guerrero Dragón (Omar Chaparro), es llamado por el destino para... tomarse un descanso. Específicamente, se le pide que se convierta en el líder espiritual del Valle de la Paz
+    </ion-card-content>
+    <ion-button expand="block" color="primary">Comprar</ion-button>
+  </ion-card>
+  <br>
 </ion-content>

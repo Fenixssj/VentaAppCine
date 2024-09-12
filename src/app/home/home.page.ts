@@ -8,37 +8,22 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  
-  username: string = 'guest';
-  
+  username: string | undefined;
+
   constructor(
     private router: Router,
     private alertController: AlertController
   ) {
-    let state = this.router.getCurrentNavigation()?.extras?.state;
-    if (state) {
+    const state = this.router.getCurrentNavigation()?.extras?.state;
+    if (state && state['user']) {
       console.log(`User: ${state['user']}`);
       this.username = state['user'];
     }
   }
 
-  public alertButtons = ['OK'];
-  public alertInputs = [
-    {
-      placeholder: 'Nombre y Apellido',
-    },
-    {
-      placeholder: 'Tu usuario',
-      attributes: {
-        maxlength: 12,
-      },
-    },
-    {
-      type: 'number',
-      placeholder: 'Edad',
-      min: 1,
-      max: 100,
-    }
-  ];
+  goToEventList(eventName: string) {
+    console.log(`Going to event list for: ${eventName}`);
+    
+  }
 }
 

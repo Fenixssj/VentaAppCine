@@ -19,7 +19,7 @@ export class LoginPage {
   ) {}
   
   validateLogin() {
-    if (this.username === 'Fenixssj' && this.password === 'ale884760881') {  
+    if (this.username === 'fenixssj' && this.password === 'admin') {  
       let extras: NavigationExtras = {
         state: {
           user: this.username
